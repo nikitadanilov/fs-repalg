@@ -1,0 +1,8 @@
+#! /bin/sh
+
+for f in *.hits ;do
+    b=$(basename $f .hits)
+    join $f opt.hits    > $b.opt
+    join $f worst.hits  > $b.worst
+    join $f random.hits > $b.random
+done

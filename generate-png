@@ -1,0 +1,6 @@
+#! /bin/sh
+
+for f in ps/*.ps ;do
+    b=$(basename $f .ps)
+    convert -rotate 90 $f png/$b.png
+done
